@@ -1,0 +1,5 @@
+# help(read.csv)
+epi_data <- read.csv(file.choose(), header=TRUE)
+head(epi_data)
+names(epi_data)
+nrow(epi_data)
