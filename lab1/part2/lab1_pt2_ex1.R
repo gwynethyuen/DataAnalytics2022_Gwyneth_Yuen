@@ -11,6 +11,23 @@ View(epi_data)
 
 # create variable for EPI column
 EPI <- epi_data$EPI
+DALY <- epi_data$DALY
+FISH <- epi_data$FISHERIES
 
 # exercise
 plot(ecdf(EPI), do.points=FALSE, verticals=TRUE)
+plot(ecdf(EPI), do.points=TRUE, verticals=TRUE)
+par(pty="s")
+
+qqnorm(EPI)
+qqline(EPI)
+
+x <- seq(30,95,1)
+x2 <- seq(30,95,2)
+qqplot(qt(ppoints(250), df=5), x, xlab="Q-Q plot 1")
+qqline(x)
+qqplot(qt(ppoints(250), df=5), x2, xlab="Q-Q plot 2")
+qqline(x2)
+
+qqplot(EPI, DALY)
+qqplot(EPI, FISH)
