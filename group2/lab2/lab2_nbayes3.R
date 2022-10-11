@@ -1,4 +1,4 @@
-require(mlbench)
+library(mlbench)
 data(HouseVotes84)
 library(klaR)
 model <- NaiveBayes(Class ~ ., data = HouseVotes84)

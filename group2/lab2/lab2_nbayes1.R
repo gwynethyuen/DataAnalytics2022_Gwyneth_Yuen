@@ -1,4 +1,5 @@
-require(mlbench)
+library(mlbench)
+library(e1071)
 data(HouseVotes84)
 model <- naiveBayes(Class ~ ., data = HouseVotes84)
 predict(model, HouseVotes84[1:10,-1])
