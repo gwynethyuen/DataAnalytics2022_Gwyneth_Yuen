@@ -7,7 +7,7 @@ iris.valid <- iris[val,]	# test
 iris.kknn <- train.kknn(Species~., iris.learn, distance = 1, kernel = c("triangular", "epanechnikov", "biweight", "triweight", "cos", "inv", "gaussian", "rank", "optimal") )
 summary(iris.kknn)
 table(predict(iris.kknn,iris.valid),iris.valid$Species)
-
+View(iris.kknn)
 head(iris.kknn$W)
 head(iris.kknn$D)
 head(iris.kknn$C)

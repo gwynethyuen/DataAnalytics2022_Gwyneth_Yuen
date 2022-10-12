@@ -1,8 +1,10 @@
 data(swiss)
-sclass <- kmeans(swiss[2:7], 3) 
+View(swiss)
+sclass <- kmeans(swiss[1:6], 3)
 table(sclass$cluster, swiss[,2])    
 # 
 library(e1071)
-m <- naiveBayes(swiss[2:7], swiss[,2])    
-table(predict(m, iswiss[2:7], swiss[,2])
+m <- naiveBayes(swiss[1:6], swiss[,2])
 
+# all arguments must have the same length
+table(predict(m, swiss[1:6]), swiss[,2])

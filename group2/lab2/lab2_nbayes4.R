@@ -1,5 +1,5 @@
 # Josh Walters
-install.packages('ElemStatLearn')
+install.packages("ElemStatLearn_2015.6.26.2.tar.gz", repos=NULL, type="source")
 library('ElemStatLearn')
 library("klaR") # different from e1071 naivebayes - try it too!
 library("caret")
@@ -22,6 +22,7 @@ prop.table(table(predict(model$finalModel,xTest)$class,yTest))
 # Alternate way to set up a training sample
 train.ind <- sample(1:nrow(spam), ceiling(nrow(spam)*2/3), replace=FALSE)
 
+# ERRORS HERE
 # apply NB classifier
 nb.res <- NaiveBayes(spam ~ ., data=spam[train.ind,])
 

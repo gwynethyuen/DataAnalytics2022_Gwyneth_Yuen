@@ -1,0 +1,8 @@
+install.packages("EDR_0.6-7.tar.gz", repos=NULL, type="source")
+library(EDR)
+# install.packages("edrGraphicalTools")
+# library(edrGraphicalTools)
+demo(edr_ex1)
+demo(edr_ex2)
+demo(edr_ex3)
+demo(edr_ex4)
